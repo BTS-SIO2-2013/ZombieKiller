@@ -66,13 +66,13 @@ public class CLI{
 
     public boolean execute() {
         System.out.println(this.controlleur.affichage());
+        if(this.controlleur instanceof ExitOption){
+            return false;
+        }
         String choix = readInput();
         Commande com = new Commande(choix);
         ICLIControleur control = this.controlleur.traitementCommande(com);
         this.controlleur = control;
-        if(this.controlleur instanceof ExitOption){
-            return false;
-        }
         return true;
     }
 

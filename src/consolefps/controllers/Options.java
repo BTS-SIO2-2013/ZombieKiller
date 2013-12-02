@@ -4,7 +4,6 @@
  */
 package consolefps.controllers;
 
-import consolefps.CLI;
 
 /**
  *
