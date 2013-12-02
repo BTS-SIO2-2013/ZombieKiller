@@ -7,6 +7,10 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 
+#Eclipse
+bin/
+
+#Java
 *.class
 
 # Package Files #
