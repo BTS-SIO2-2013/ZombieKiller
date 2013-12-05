@@ -10,7 +10,7 @@ Morales Erwann
 Maigrot Alexis
 Pierre Bousquié 
 Yanick Servante
-charles Jussan
+charlou Jussan
 Yanique Servant
 Gauthier Pech de Laclause
 Xavier DEFER
