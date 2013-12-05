@@ -11,4 +11,4 @@ Gauthier Pech de Laclause
 Xavier PAQUET
 charles Jussan
 Pierre Bousquié 
-Xavier DEFER a tout fer
+Xavier DEFER
