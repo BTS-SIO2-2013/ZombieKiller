@@ -23,7 +23,7 @@ Pierre Bousquié
 Yanique Servant
 <<<<<<< HEAD
 Gauthier Pech de Laclause
-Xavier DEFER
+Xavier DEFER a tout fer
 =======
 Xavier PAQUET
 >>>>>>> 32f1771ead1ffc7983dd3d7b5f194c62e819f298
