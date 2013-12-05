@@ -1,4 +1,4 @@
-package consolefps.models.elements;
+package consolefps.models.elements.arme;
 
 import consolefps.models.Position;
 

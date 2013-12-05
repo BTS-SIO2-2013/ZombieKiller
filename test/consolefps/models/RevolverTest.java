@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import consolefps.models.elements.Revolver;
+import consolefps.models.elements.arme.Revolver;
 
 public class RevolverTest {
 
