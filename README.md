@@ -1,22 +1,16 @@
 ZombieKiller
-============
-Un jeu de zombie en java.  Fil rouge de l'enseignement du BTS SIO2.
-
-Gourmelon Jean-Michel
-Tristan Ferie le beaugoss
-Adam Dief
-Tristane Ferie
+Un jeu de zombie en java. Fil rouge de l'enseignement du BTS SIO2.
 Morales Erwann
+Gourmelon Jean-Michel
+Adam Dief
 Maigrot Alexis
-Pierre Bousquié 
+Tristan Ferie
 Yanick Servant
-charles Jussan
-Yanique Servant
+Ducastel Benoit
 Gauthier Pech de Laclause
-<<<<<<< HEAD
-Xavier DEFER a tout fer
-=======
-=======
-Xavier DEFER
->>>>>>> f6f8c9c5ef9d6934ed2e096f6cb51a636cb3a389
 Xavier PAQUET
+charles Jussan
+Pierre Bousquié 
+charle Jussan
+Xavier DEFER a tout fer
+Kevin HILAIRET
