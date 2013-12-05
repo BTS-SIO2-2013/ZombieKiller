@@ -14,6 +14,12 @@ Morales Erwann
 Tristan Ferie aime la prendre
 Adam Dief aime lui mettre
 Tristane Ferie
+Morales Erwann
+Yanick Servant
+Ducastel Benoit
+Gauthier Pech de Laclause
+Xavier PAQUET
+charles Jussan
 Moralous Erwanne
 Adam Dief 
 Maigrot Alexis
@@ -21,6 +27,10 @@ Tristan Ferie
 Yanick Servant
 Ducastel Benoit
 Gauthier Pech de Laclause
+Xavier DEFER
+Kevin HILAIRET
+Xavier PAQUET
+Larcelet Mathieu
 Xavier PAQUET
 Damien CRASBERCU
 charles Jussan
