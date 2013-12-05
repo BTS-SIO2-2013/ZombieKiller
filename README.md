@@ -10,7 +10,7 @@ Tristane Ferie
 Morales Erwann
 Maigrot Alexis
 Pierre Bousquié 
-Yanick Servant
+Yanick Servante
 charles Jussan
 Yanique Servant
 Gauthier Pech de Laclause
