@@ -10,7 +10,7 @@ Moralous Erwanne
 Maigrot Alexis
 Pierre Bousquié 
 Yanick Servante
-charlou Jussan
+charlou JussanE
 Yanique Servant
 Gauthier Pech de Laclause
 Xavier DEFER
