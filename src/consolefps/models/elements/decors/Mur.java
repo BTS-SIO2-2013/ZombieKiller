@@ -18,6 +18,7 @@ public class Mur extends Decors{
         super(position);
     }
 
+    
     public Mur(int x, int y) {
         super(x, y);
     }

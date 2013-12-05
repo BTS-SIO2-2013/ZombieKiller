@@ -22,6 +22,7 @@ public abstract class Decors extends Elements{
         super(position);
     }
 
+    
     public Decors(int x, int y) {
         super(x, y);
     }

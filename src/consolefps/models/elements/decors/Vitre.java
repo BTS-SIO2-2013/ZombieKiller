@@ -22,6 +22,7 @@ public class Vitre extends Decors {
         super(x, y);
     }
     
+    
     @Override
     public String afficher() {
             return "v";
