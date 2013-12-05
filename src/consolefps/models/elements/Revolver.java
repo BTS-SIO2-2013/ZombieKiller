@@ -1,9 +1,19 @@
 package consolefps.models.elements;
 
+import consolefps.models.Position;
+
 public class Revolver extends Arme {
 	
 
-    @Override
+    public Revolver(int x, int y) {
+		super(x, y);
+	}
+    
+    public Revolver(Position position) {
+		super(position);
+	}
+
+	@Override
     public String afficher() {
         return "[r]";
     }
