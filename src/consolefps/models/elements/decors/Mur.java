@@ -25,7 +25,7 @@ public class Mur extends Decors{
 
     @Override
     public String afficher() {
-            return "w";
+            return "[w]";
     }
 
     

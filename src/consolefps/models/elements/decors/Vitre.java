@@ -25,6 +25,6 @@ public class Vitre extends Decors {
     
     @Override
     public String afficher() {
-            return "v";
+            return "[v]";
     }
 }

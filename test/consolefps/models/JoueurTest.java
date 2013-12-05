@@ -25,7 +25,7 @@ public class JoueurTest {
     public void testDeplacer(){
         //Arrange
         Sens sens = Sens.BAS;
-        Joueur j = new Joueur();
+        Joueur j = new Joueur(0,0);
  
         //Act
         j.deplacer(sens);
@@ -40,7 +40,7 @@ public class JoueurTest {
     public void testDeplacer2(){
         //Arrange
         Sens sens = Sens.DROITE;
-        Joueur j = new Joueur();
+        Joueur j = new Joueur(0,0);
  
         //Act
         j.deplacer(sens);
@@ -55,7 +55,7 @@ public class JoueurTest {
     public void testDeplacer3(){
         //Arrange
         Sens sens = Sens.DROITE;
-        Joueur j = new Joueur();
+        Joueur j = new Joueur(0,0);
  
         //Act
         j.deplacer(sens);

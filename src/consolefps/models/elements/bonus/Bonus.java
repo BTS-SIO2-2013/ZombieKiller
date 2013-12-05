@@ -1,4 +1,4 @@
-package consolefps.bonus;
+package consolefps.models.elements.bonus;
 import consolefps.models.Position;
 import consolefps.models.elements.Elements;
 

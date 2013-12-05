@@ -12,7 +12,7 @@ import consolefps.models.Position;
  *
  * @author krilivye
  */
-public class Joueur extends Actor implements IAffichage{
+public class Joueur extends Actor{
 
     public Joueur(Position position) {
         super(position);
@@ -30,7 +30,7 @@ public class Joueur extends Actor implements IAffichage{
 
     @Override
     public String afficher() {
-        return "[J]";
+        return "[j]";
     }
 
     public void deplacer(Sens sens) {
