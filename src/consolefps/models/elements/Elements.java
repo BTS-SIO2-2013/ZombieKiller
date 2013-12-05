@@ -16,7 +16,11 @@ public abstract class Elements implements IPositionable,IAffichage {
 
     private Position position;
 
-    public Elements() {
+    public Elements(Position position) {
+    	this.position = position;
+    }
+    public Elements(int x,int y){
+    	this.position = new Position(x, y);
     }
 
     @Override

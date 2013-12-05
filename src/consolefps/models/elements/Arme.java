@@ -1,6 +1,7 @@
 package consolefps.models.elements;
 
 import consolefps.models.elements.Elements;
+import consolefps.views.IAffichage;
 
 /*
  * To change this template, choose Tools | Templates
@@ -11,12 +12,11 @@ import consolefps.models.elements.Elements;
  *
  * @author krilivye
  */
-public class Arme extends Elements{
+public abstract class  Arme extends Elements{
 
     @Override
-    public String afficher() {
-        return "[a]";
-    }
+    public abstract String afficher();
+        
     
     
 }
