@@ -12,4 +12,3 @@ Xavier PAQUET
 charles Jussan
 Pierre Bousquié 
 Xavier DEFER a tout fer
-Kevin HILAIRET
