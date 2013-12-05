@@ -6,7 +6,7 @@ Gourmelon Jean-Michel
 Tristan Ferie le beaugoss
 Adam Dief
 Tristane Ferie
-Morales Erwann
+Moralous Erwanne
 Maigrot Alexis
 Pierre Bousquié 
 Yanick Servante
