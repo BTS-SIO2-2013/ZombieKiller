@@ -161,6 +161,7 @@
 #  Utiliser la commande:
 #  $ git commit
 #  Cette action lance l'éditeur par défaut.
+#  Par défaut VI . Utiliser i pour inserer du text et <Esc>:wq pour sauver    
 #  Dans l'éditeur écrivez le but de la modification (ici ajouts de fichiers)
 #  Sauver le message du 'COMMIT'
 #  L'action de COMMIT envoie les MODIFICATIONS (Changes) sur le DÉPOT local.
@@ -204,7 +205,7 @@
 #  Pour déplacer/renommer un fichier il faut utiliser la commande:
 #  $ git mv nom_origine.extension nom_cible.extension
 
-#  Cela permet à l'outi de suivre les modifications même si le fichier est déplacer, mais également de garder en mémoire la position du fichier dans l'historique!
+#  Cela permet à l'outil de suivre les modifications même si le fichier est déplacer, mais également de garder en mémoire la position du fichier dans l'historique!
 
 #  Visualiser les différents moditifactions
 #  Utiliser la commande
@@ -218,7 +219,7 @@
 #  $ git commit --amend
 
 #  Par exemple:
-# $ git commit -m 'validation initiale'
+# $ git commit -m "validation initiale"
 # $ git add fichier_oublie
 # $ git commit --amend
 # Ces trois dernières commandes donnent lieu à la création d'un unique commit — la seconde validation remplace le résultat de la première.
@@ -247,7 +248,7 @@
 #  $ git remote
 #  Vous permet de voir les différents dépots distant, ici vous ne devez avoir qu'un seul dépot 'origin'
 
-#  Pour récuperer ('POUSSER') les modifications (VERSIONS) du dépot local sur le dépot distant on utilise la commande:
+#  Pour soumettre ('POUSSER') les modifications (VERSIONS) du dépot local sur le dépot distant on utilise la commande:
 #  $ git push
 
 #  Pour récuperer ('TIRER') les VERSIONS du DÉPOT distant sur le DÉPOT local on utilise la commande:

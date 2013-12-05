@@ -18,3 +18,7 @@ bin/
 *.war
 *.ear
 /.settings/
+
+# Py temp
+#
+*.py.swo
