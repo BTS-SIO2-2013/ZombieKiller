@@ -304,4 +304,3 @@
 #4 [w][w][w][w][w]
 
 # La note d'équipe sera moyenné avec une note de participation individuelle laissé à mon appreciation.
-test
