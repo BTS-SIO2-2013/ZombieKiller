@@ -20,3 +20,6 @@ Damien CRASBERCU
 charles Jussan
 Pierre Bousquié 
 Xavier DEFER
+Kevin Hilairet
+Mathieu Larcelet
+David Laguerre
