@@ -26,6 +26,7 @@ Gourmelon Jean-Michel
 Tristan Ferie le beaugoss
 Adam Dief
 Tristane Ferie
+
 Morales Erwann
 Yanick Servant
 
@@ -35,6 +36,11 @@ Xavier PAQUET
 
 
 charles Jussan
+Moralous Erwanne
+Maigrot Alexis
+Pierre Bousquié 
+Yanick Servante
+charlou Jussan
 Yanique Servant
 Gauthier Pech de Laclause
 Xavier DEFER
