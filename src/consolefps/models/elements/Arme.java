@@ -1,6 +1,7 @@
 package consolefps.models.elements;
 
 import consolefps.models.elements.Elements;
+import consolefps.views.IAffichage;
 
 /*
  * To change this template, choose Tools | Templates

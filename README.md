@@ -19,6 +19,9 @@ Xavier PAQUET
 Damien CRASBERCU
 charles Jussan
 Pierre Bousquié 
+Xavier DEFER a tout fer
+MAthieu LARCELET
+Kevin HILAIRET
 Xavier DEFER
 Kevin Hilairet
 Mathieu Larcelet
