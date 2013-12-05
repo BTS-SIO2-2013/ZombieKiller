@@ -19,4 +19,4 @@ Xavier PAQUET
 Damien CRASBERCU
 charles Jussan
 Pierre Bousquié 
-Xavier DEFER a tout fer
+Xavier DEFER
