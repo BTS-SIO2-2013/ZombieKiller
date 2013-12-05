@@ -20,7 +20,14 @@ public class Jeux implements ICLIControleur{
     private final Joueur joueur;
     private final Grille grille;
     private final List<Zombie> zombies;
+    private final List<Bonus> bonus;
+    private final List<Arme> armes;
+    private final List<Decor> decors;
     private Menu menu;
+    private Hache haches;
+    private Fusilapompe fusilapompes;
+    private Revolver6coups revolver6coups;
+    private Vitre vitres;
     
     private final static Commande BAS = new Commande("bas");
     private final static Commande HAUT = new Commande("haut");
@@ -29,10 +36,13 @@ public class Jeux implements ICLIControleur{
     private final static Commande EXIT = new Commande("exit");
     
     public Jeux(){
-        this.joueur = new Joueur();
+        this.joueur = new Joueur(1,1);
         this.grille = new Grille();
         this.zombies = new LinkedList<Zombie>();
-        
+        this.haches = new Hache(3,2);
+        this.fusilapompes = new Fusilapompes(4,2);
+        this.revolver6coups = new Revolver6coups(4,4);
+        this.vitres = new Vitre (3,1);
         this.grille.ajouterElement(joueur);
     }
     public Jeux(Menu menu){
@@ -60,6 +70,22 @@ public class Jeux implements ICLIControleur{
     void deplacer(Joueur joueur, Sens sens) {
         this.joueur.deplacer(sens);
     }
+    
+    public Hache getGrille() {
+        return this.haches;
+    }
+    
+    public Vitre getGrille () {
+        return this.vitres;
+    }
+    
+    public Fusilapompe getGrille() {
+        return this.fusilapompes;
+    }
+    
+    public Revolver6coups getGrille() {
+        return this.revolver6coups;
+    }
 
     @Override
     public ICLIControleur traitementCommande(Commande commande) {
@@ -86,5 +112,4 @@ public class Jeux implements ICLIControleur{
         return this.grille.afficherGrille();
         
     }
-    
 }
