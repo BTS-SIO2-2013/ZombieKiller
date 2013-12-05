@@ -1,54 +1,28 @@
 ZombieKiller
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
+============
 
 Un jeu de zombie en java. Fil rouge de l'enseignement du BTS SIO2.
-
-Modification du read
-
 
 Morales Erwann
-Un jeu de zombie en java.  Fil rouge de l'enseignement du BTS SIO2.
-
-
-
-Un jeu de zombie en java. Fil rouge de l'enseignement du BTS SIO2.
-
 Gourmelon Jean-Michel
-
-Adam Dief le pas beaugoss
-Maigrot Alexis le gentil
-
-=======
-
-
-
-Un jeu de zombie en java.  Fil rouge de l'enseignement du BTS SIO2.
-
-Gourmelon Jean-Michel
-Tristan Ferie le beaugoss ou pas...
-Adam Dief
+Tristan Ferie aime la prendre
+Adam Dief aime lui mettre
 Tristane Ferie
-
-Morales Erwann
+Moralous Erwanne
+Adam Dief 
+Maigrot Alexis
+Tristan Ferie
 Yanick Servant
-
 Ducastel Benoit
 Gauthier Pech de Laclause
 Xavier PAQUET
-
-
+Damien CRASBERCU
 charles Jussan
-Moralous Erwanne
-Maigrot Alexis
 Pierre Bousquié 
-Yanick Servante
-charlou Jussan
-Yanique Servant
-Gauthier Pech de Laclause
-Xavier DEFER
+Xavier DEFER a tout fer
+MAthieu LARCELET
 Kevin HILAIRET
-Xavier PAQUET
-
+Xavier DEFER
+Kevin Hilairet
+Mathieu Larcelet
+David Laguerre
