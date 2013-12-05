@@ -11,12 +11,11 @@ import consolefps.models.elements.Elements;
  *
  * @author krilivye
  */
-public class Arme extends Elements{
+public abstract class  Arme extends Elements{
 
     @Override
-    public String afficher() {
-        return "[a]";
-    }
+    public abstract String afficher();
+        
     
     
 }
