@@ -6,24 +6,31 @@ package consolefps.models.elements;
 
 import consolefps.models.Sens;
 import consolefps.views.IAffichage;
+import consolefps.models.Position;
 
 /**
  *
  * @author krilivye
  */
-public class Joueur extends Elements implements IAffichage{
-    
-    public Joueur(){
-        this.setPosition(0,0);
+public class Joueur extends Actor{
+
+    public Joueur(Position position) {
+        super(position);
     }
 
+    public Joueur(int x, int y) {
+        super(x, y);
+    }
+    
+    
+    
     public void afficherPosition() {
         System.out.println(this.getPosition());
     }
 
     @Override
     public String afficher() {
-        return "[x]";
+        return "[j]";
     }
 
     public void deplacer(Sens sens) {

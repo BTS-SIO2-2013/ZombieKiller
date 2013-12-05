@@ -12,17 +12,14 @@ import consolefps.views.IAffichage;
  *
  * @author krilivye
  */
-public class Zombie extends Elements implements  IAffichage{
-
+public class Zombie extends Actor implements  IAffichage{
 
     public Zombie(Position position) {
-        super();
-        this.setPosition(position);
+        super(position);
     }
 
     public Zombie(int x, int y) {
-        super();
-        this.setPosition(x, y);
+        super(x, y);
     }
 
     @Override
