@@ -6,10 +6,24 @@
 
 package consolefps.models.elements.decors;
 
+import consolefps.models.Position;
+import consolefps.models.elements.Elements;
+
 /**
  *
  * @author Kévin
  */
-public class Decors {
+public abstract class Decors extends Elements{
+
+    @Override
+    public abstract String afficher();
+
+    public Decors(Position position) {
+        super(position);
+    }
+
+    public Decors(int x, int y) {
+        super(x, y);
+    }
     
 }

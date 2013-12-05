@@ -6,10 +6,26 @@
 
 package consolefps.models.elements.decors;
 
+import consolefps.models.Position;
+
 /**
  *
  * @author Kévin
  */
-public class Mur {
+public class Mur extends Decors{
+
+    public Mur(Position position) {
+        super(position);
+    }
+
+    public Mur(int x, int y) {
+        super(x, y);
+    }
+
+    @Override
+    public String afficher() {
+            return "w";
+    }
+
     
 }
