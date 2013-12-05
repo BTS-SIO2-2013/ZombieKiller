@@ -16,11 +16,11 @@ public abstract class Elements implements IPositionable,IAffichage {
 
     private Position position;
 
-    public Elements(Position p_position) {
-    	setPosition(p_position);
-	}
 	
-    public Elements() {
+    public Elements() {}
+
+    public Elements(Position position) {
+    	this.position = position;
     }
     
     public Elements(int p_x, int p_y) {
