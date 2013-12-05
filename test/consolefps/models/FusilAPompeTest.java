@@ -4,7 +4,7 @@
  */
 package consolefps.models;
 
-import consolefps.models.elements.FusilAPompe;
+import consolefps.models.elements.arme.FusilAPompe;
 import consolefps.models.elements.Zombie;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
