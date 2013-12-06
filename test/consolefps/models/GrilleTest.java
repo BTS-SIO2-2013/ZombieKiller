@@ -98,8 +98,8 @@ public class GrilleTest {
     	grid.ajouterElement(mur);
     	
     	//Assert
-    	assertEquals(true, grid.isValide(new Position(0,0)));
-    	assertEquals(false, grid.isValide(new Position(2,1)));
+    	assertEquals(true, grid.isValide(hache.getPosition()));
+    	assertEquals(false, grid.isValide(mur.getPosition()));
     	
     }
     
@@ -115,8 +115,8 @@ public class GrilleTest {
     	grid.ajouterElement(mur);
     	
     	//Assert
-    	assertEquals(false, grid.isDecors(new Position(0,0)));
-    	assertEquals(true, grid.isDecors(new Position(2,1)));
+    	assertEquals(false, grid.isDecors(hache.getPosition()));
+    	assertEquals(true, grid.isDecors(mur.getPosition()));
     }
     
     @Test
@@ -124,9 +124,16 @@ public class GrilleTest {
         //Arrange
     	Grille grid = new Grille(1,1);
         Joueur j = new Joueur(0,0);
+        Joueur j2= new Joueur(0,0);
         
         //Act
         grid.ajouterElement(j);
+        grid.ajouterElement(j2);
         j.deplacer(Sens.HAUT);
+        j2.deplacer(Sens.BAS);
+        
+        //Assert
+        assertEquals(false,grid.isDansLaGrille(j.getPosition()));
+        assertEquals(true,grid.isDansLaGrille(j2.getPosition()));
     }
 }
