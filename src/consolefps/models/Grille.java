@@ -5,6 +5,8 @@
 package consolefps.models;
 
 import consolefps.models.elements.Elements;
+import consolefps.models.elements.decors.Decors;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +20,7 @@ public class Grille {
     private List<Elements> objets;
 
     public Grille(int nbColonnes, int nbLignes) {
+        this();
         this.nbLignes = nbLignes;
         this.nbColonnes = nbColonnes;
     }
@@ -90,6 +93,27 @@ public class Grille {
     public void setNbColonnes(int i) {
         this.nbColonnes = i;
     }
+    
+	public boolean isDecors(Position laPosition) {
+
+		for (Elements element : this.objets) {
+			if (laPosition.equals( element.getPosition())) {
+				return element instanceof Decors;
+			}
+		}
+		return false;
+	}
+    	
+    	public boolean isValide(Position laPosition){
+    		
+    	 boolean valide = true;
+    	 valide = (!isDecors(laPosition));
+    	 
+    	 return valide;
+    	
+    	
+    }
+    	
     
     
     

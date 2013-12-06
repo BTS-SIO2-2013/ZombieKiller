@@ -114,7 +114,7 @@ public class GrilleTest {
     	grid.ajouterElement(mur);
     	
     	//Assert
-    	assertEquals(false, grid.isVDecors(new Position(0,0)));
+    	assertEquals(false, grid.isDecors(new Position(0,0)));
     	assertEquals(true, grid.isDecors(new Position(2,1)));
     }
 }
