@@ -2,7 +2,6 @@ package consolefps.models.elements.arme;
 
 import consolefps.models.Position;
 import consolefps.models.elements.Elements;
-import consolefps.views.IAffichage;
 
 /*
  * To change this template, choose Tools | Templates

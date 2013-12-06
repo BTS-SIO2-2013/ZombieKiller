@@ -5,7 +5,6 @@
 package consolefps.models.elements;
 
 import consolefps.models.Position;
-import consolefps.models.elements.Elements;
 import consolefps.views.IAffichage;
 
 /**
