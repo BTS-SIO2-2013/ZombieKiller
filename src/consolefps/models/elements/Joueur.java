@@ -59,7 +59,7 @@ public class Joueur extends Actor{
         
         if (leSens.equals(Sens.BAS)){
             int y = this.getPosition().getY()+1;
-            laPositionSuivante.setX(y);
+            laPositionSuivante.setY(y);
             
         }
         if (leSens.equals(Sens.DROITE)){
