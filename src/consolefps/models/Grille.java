@@ -105,14 +105,22 @@ public class Grille {
 	}
         
         public boolean isDansLaGrille(Position laPosition){
-            
-            return false;
+            if(laPosition.getX() > this.getNbColonnes())
+                return false;
+            if(laPosition.getY() > this.getNbLignes())
+                return false;
+            if(laPosition.getX() < 0)
+                return false;
+            if(laPosition.getY() < 0)
+                return false;
+            return true;
         }
     	
     	public boolean isValide(Position laPosition){
     		
     	 boolean valide = true;
     	 valide = (!isDecors(laPosition));
+         valide = (isDansLaGrille(laPosition));
     	 
     	 return valide;
     	

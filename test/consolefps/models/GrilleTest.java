@@ -5,6 +5,7 @@ package consolefps.models;
  * and open the template in the editor.
  */
 
+import consolefps.models.elements.Joueur;
 import org.junit.Test;
 
 import consolefps.models.elements.arme.Hache;
@@ -116,5 +117,16 @@ public class GrilleTest {
     	//Assert
     	assertEquals(false, grid.isDecors(new Position(0,0)));
     	assertEquals(true, grid.isDecors(new Position(2,1)));
+    }
+    
+    @Test
+    public void testisDansGrille(){
+        //Arrange
+    	Grille grid = new Grille(1,1);
+        Joueur j = new Joueur(0,0);
+        
+        //Act
+        grid.ajouterElement(j);
+        j.deplacer(Sens.HAUT);
     }
 }
