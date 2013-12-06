@@ -121,18 +121,21 @@ public class Jeux implements ICLIControleur{
     
     @Override
     public ICLIControleur traitementCommande(Commande commande) {
-        if (Jeux.BAS.equals(commande)){
+    	
+        if (Jeux.BAS.equals(commande)&&grille.isValide(joueur.positionSuivante(Sens.BAS))){
             this.joueur.deplacer(Sens.BAS);
         }
-        if (Jeux.HAUT.equals(commande)){
+        
+        if (Jeux.HAUT.equals(commande)&&grille.isValide(joueur.positionSuivante(Sens.HAUT))){
             this.joueur.deplacer(Sens.HAUT);
         }
-        if(Jeux.GAUCHE.equals(commande)){
+        if(Jeux.GAUCHE.equals(commande)&&grille.isValide(joueur.positionSuivante(Sens.GAUCHE))){
             this.joueur.deplacer(Sens.GAUCHE);
         }
-        if(Jeux.DROITE.equals(commande)){
+        if(Jeux.DROITE.equals(commande)&&grille.isValide(joueur.positionSuivante(Sens.DROITE))){
             this.joueur.deplacer(Sens.DROITE);
         }
+      
         if (Jeux.EXIT.equals(commande)){
             return this.menu;
         }
