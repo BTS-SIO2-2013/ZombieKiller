@@ -115,9 +115,10 @@ public class Jeux implements ICLIControleur{
     }
 
     void deplacer(Joueur joueur, Sens sens) {
+        //if(this.joueur.positionSuivante(sens))
         this.joueur.deplacer(sens);
     }
-
+    
     @Override
     public ICLIControleur traitementCommande(Commande commande) {
         if (Jeux.BAS.equals(commande)){

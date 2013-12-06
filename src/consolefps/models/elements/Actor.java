@@ -21,7 +21,6 @@ public abstract class Actor extends Elements {
     public Actor(int x, int y) {
         super(x, y);
     }
-
     @Override
     public abstract String afficher();
     

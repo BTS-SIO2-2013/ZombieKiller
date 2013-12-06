@@ -62,9 +62,17 @@ public class JoueurTest {
         j.deplacer(sens);
         
         //Assert
-        assertEquals(new Position(2,0), j.getPosition());
-   
+        assertEquals(new Position(2,0), j.getPosition());    
+    }
     
-    
+    @Test
+    public void testPositionSuivante(){
+        //Arrange
+        Sens leSens = Sens.HAUT;
+        Joueur j = new Joueur(0,0);
+        //Act
+        Position retour = j.positionSuivante(leSens);
+        //Assert
+        assertEquals(new Position(0,-1), retour);
     }
 }

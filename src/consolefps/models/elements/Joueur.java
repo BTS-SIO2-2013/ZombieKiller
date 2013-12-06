@@ -53,4 +53,28 @@ public class Joueur extends Actor{
         
         
     }
+
+    public Position positionSuivante(Sens leSens) {
+        Position laPositionSuivante = new Position(0, 0);
+        
+        if (leSens.equals(Sens.BAS)){
+            int y = this.getPosition().getY()+1;
+            laPositionSuivante.setX(y);
+            
+        }
+        if (leSens.equals(Sens.DROITE)){
+            int x = this.getPosition().getX()+1;
+            laPositionSuivante = new Position(this.getPosition().getY(),x);
+        }
+        if (leSens.equals(Sens.GAUCHE)){
+            int x = this.getPosition().getX()-1;
+            laPositionSuivante = new Position(this.getPosition().getY(), x);
+        }
+        if (leSens ==Sens.HAUT){
+            int y = this.getPosition().getY()-1;
+            laPositionSuivante.setY(y);
+        }
+        
+        return laPositionSuivante;
+    }
 }
