@@ -103,6 +103,11 @@ public class Grille {
 		}
 		return false;
 	}
+        
+        public boolean isDansLaGrille(Position laPosition){
+            
+            return false;
+        }
     	
     	public boolean isValide(Position laPosition){
     		
