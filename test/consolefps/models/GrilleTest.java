@@ -6,6 +6,9 @@ package consolefps.models;
  */
 
 import org.junit.Test;
+
+import consolefps.models.elements.arme.Hache;
+import consolefps.models.elements.decors.Mur;
 import static org.junit.Assert.*;
 
 /**
@@ -80,5 +83,38 @@ public class GrilleTest {
                      grid.entete()+
                      "0[ ][ ]\n"+
                      "1[ ][ ]\n", s); 
+    }
+    
+    @Test
+    public void testisValide(){
+    	//Arrange
+    	Grille grid = new Grille(2,1);
+    	Hache hache = new Hache(0,0);
+    	Mur mur = new Mur(2,1);
+    	
+    	//Act
+    	grid.ajouterElement(hache);
+    	grid.ajouterElement(mur);
+    	
+    	//Assert
+    	assertEquals(true, grid.isValide(new Position(0,0)));
+    	assertEquals(false, grid.isValide(new Position(2,1)));
+    	
+    }
+    
+    @Test
+    public void testisDecors(){
+    	//Arrange
+    	Grille grid = new Grille(2,1);
+    	Hache hache = new Hache(0,0);
+    	Mur mur = new Mur(2,1);
+    	
+    	//Act
+    	grid.ajouterElement(hache);
+    	grid.ajouterElement(mur);
+    	
+    	//Assert
+    	assertEquals(false, grid.isVDecors(new Position(0,0)));
+    	assertEquals(true, grid.isDecors(new Position(2,1)));
     }
 }
