@@ -57,16 +57,29 @@ public class CLI{
 
 
     public boolean execute() {
-        System.out.println(this.controlleur.affichage());
-        if(this.controlleur instanceof ExitOption){
-            return false;
+        afficherSortieConsole();
+        if(isExitCondition()){
+        	return false;
         }
+        
         String choix = readInput();
         Commande com = new Commande(choix);
-        ICLIControleur control = this.controlleur.traitementCommande(com);
-        this.controlleur = control;
+        
+        this.controlleur = this.controlleur.traitementCommande(com);
+        
         return true;
     }
+
+	private void afficherSortieConsole() {
+		System.out.println(this.controlleur.affichage());
+	}
+
+	private boolean isExitCondition() {
+		if(this.controlleur instanceof ExitOption){
+            return true;
+        }
+		return false;
+	}
 
     public void setControlleur(ICLIControleur controlleur) {
         this.controlleur = controlleur;
