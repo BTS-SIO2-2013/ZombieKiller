@@ -54,15 +54,7 @@ public class CLI{
         return sortie;
     }
     
-    public static String readSystemInput(){
-        String sortie ="";
-        try {
-            sortie = getSystemInput().readLine();            
-        } catch (IOException ex) {
-            Logger.getLogger(CLI.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return sortie;
-    }
+
 
     public boolean execute() {
         System.out.println(this.controlleur.affichage());

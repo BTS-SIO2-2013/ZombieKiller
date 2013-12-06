@@ -5,7 +5,6 @@
 package consolefps.controllers;
 
 import consolefps.models.Grille;
-import consolefps.models.Position;
 import consolefps.models.Sens;
 import consolefps.models.elements.arme.Arme;
 import consolefps.models.elements.arme.FusilAPompe;
