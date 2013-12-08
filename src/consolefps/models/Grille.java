@@ -119,8 +119,9 @@ public class Grille {
     	public boolean isValide(Position laPosition){
     		
     	 boolean valide = true;
+    	 valide = (isDansLaGrille(laPosition));
     	 valide = (!isDecors(laPosition));
-         valide = (isDansLaGrille(laPosition));
+         
     	 
     	 return valide;
     	

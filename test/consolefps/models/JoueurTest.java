@@ -68,11 +68,21 @@ public class JoueurTest {
     @Test
     public void testPositionSuivante(){
         //Arrange
-        Sens leSens = Sens.HAUT;
-        Joueur j = new Joueur(0,0);
+        Sens haut = Sens.HAUT;
+        Sens bas = Sens.BAS;
+        Sens gauche = Sens.GAUCHE;
+        Sens droite = Sens.DROITE;
+        Joueur j = new Joueur(2,2);
         //Act
-        Position retour = j.positionSuivante(leSens);
+        Position posBas = j.positionSuivante(bas);
+        Position posHaut = j.positionSuivante(haut);
+        Position posGauche = j.positionSuivante(gauche);
+        Position posDroite = j.positionSuivante(droite);
         //Assert
-        assertEquals(new Position(0,-1), retour);
+        assertEquals(new Position(2,1), posHaut);
+        assertEquals(new Position(2,3), posBas);
+        assertEquals(new Position(1,2), posGauche);
+        assertEquals(new Position(3,2), posDroite);
+        
     }
 }
