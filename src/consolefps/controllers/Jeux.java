@@ -124,7 +124,13 @@ public class Jeux implements ICLIControleur {
 
 	@Override
 	public ICLIControleur traitementCommande(Commande commande) {
-
+		
+		if ((Jeux.BAS.equals(commande))&&(!grille.isValide(joueur.positionSuivante(Sens.BAS)))
+				||((Jeux.HAUT.equals(commande))&&(!grille.isValide(joueur.positionSuivante(Sens.HAUT))))
+						||((Jeux.GAUCHE.equals(commande))&&(!grille.isValide(joueur.positionSuivante(Sens.GAUCHE))))||
+								((Jeux.DROITE.equals(commande))&&(!grille.isValide(joueur.positionSuivante(Sens.DROITE))))){
+			System.out.println("Bim le mur!");
+		}
 		if (Jeux.BAS.equals(commande)
 				&& grille.isValide(joueur.positionSuivante(Sens.BAS))) {
 			this.joueur.deplacer(Sens.BAS);
@@ -142,6 +148,7 @@ public class Jeux implements ICLIControleur {
 				&& grille.isValide(joueur.positionSuivante(Sens.DROITE))) {
 			this.joueur.deplacer(Sens.DROITE);
 		}
+		
 		// Compare la position du joueur a la position de chaque zombie, en cas d'egalite la partie se termine.
 		for (Zombie element : this.zombies) {
 			if (joueur.getPosition().equals(element.getPosition())) {
@@ -153,7 +160,7 @@ public class Jeux implements ICLIControleur {
 		if (Jeux.EXIT.equals(commande)) {
 			return this.menu;
 		}
-
+		
 		return this;
 	}
 
