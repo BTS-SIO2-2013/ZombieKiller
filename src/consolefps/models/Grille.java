@@ -124,11 +124,11 @@ public class Grille {
 	public boolean isValide(final Position laPosition) {
 
 		boolean valide = true;
+
 		valide = isDansLaGrille(laPosition);
 		valide = !isDecors(laPosition);
 
 		return valide;
-
 	}
 
 }
