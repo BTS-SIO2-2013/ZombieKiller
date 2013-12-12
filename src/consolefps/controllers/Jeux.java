@@ -139,6 +139,55 @@ public class Jeux implements ICLIControleur {
 		if (Jeux.EXIT.equals(commande)) {
 			return this.menu;
 		}
+
+		if (Jeux.BAS.equals(commande)
+				&& !this.grille
+						.isValide(this.joueur.positionSuivante(Sens.BAS))
+				|| Jeux.HAUT.equals(commande)
+				&& !this.grille.isValide(this.joueur
+						.positionSuivante(Sens.HAUT))
+				|| Jeux.GAUCHE.equals(commande)
+				&& !this.grille.isValide(this.joueur
+						.positionSuivante(Sens.GAUCHE))
+				|| Jeux.DROITE.equals(commande)
+				&& !this.grille.isValide(this.joueur
+						.positionSuivante(Sens.DROITE))) {
+			System.out.println("Bim le mur!");
+		}
+		if (Jeux.BAS.equals(commande)
+				&& this.grille.isValide(this.joueur.positionSuivante(Sens.BAS))) {
+			this.joueur.deplacer(Sens.BAS);
+		}
+
+		if (Jeux.HAUT.equals(commande)
+				&& this.grille
+						.isValide(this.joueur.positionSuivante(Sens.HAUT))) {
+			this.joueur.deplacer(Sens.HAUT);
+		}
+		if (Jeux.GAUCHE.equals(commande)
+				&& this.grille.isValide(this.joueur
+						.positionSuivante(Sens.GAUCHE))) {
+			this.joueur.deplacer(Sens.GAUCHE);
+		}
+		if (Jeux.DROITE.equals(commande)
+				&& this.grille.isValide(this.joueur
+						.positionSuivante(Sens.DROITE))) {
+			this.joueur.deplacer(Sens.DROITE);
+		}
+
+		// Compare la position du joueur a la position de chaque zombie, en cas
+		// d'egalite la partie se termine.
+		for (Zombie element : this.zombies) {
+			if (this.joueur.getPosition().equals(element.getPosition())) {
+				System.out.println("GAMEOVER!");
+				return this.menu;
+			}
+		}
+
+		if (Jeux.EXIT.equals(commande)) {
+			return this.menu;
+		}
+
 		return this;
 	}
 

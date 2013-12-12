@@ -5,19 +5,33 @@ Un jeu de zombie en java. Fil rouge de l'enseignement du BTS SIO2.
 
 Pierre Bousquié 
 
-Morales Erwann
-Gourmelon Jean-Michel
+Erwann Morales
+
+Jean-Michel Gourmelon
+
 Adam Dief
-Maigrot Alexis
+
+Alexis Maigrot
+
 Tristan Ferie
+
 Yanick Servant
-Ducastel Benoit
+
+Benoit Ducastel
+
 Gauthier Pech de Laclause
-Xavier PAQUET
-charles Jussan
-Xavier DEFER
-Kevin HILAIRET
-Larcelet Mathieu
-Damien CRASBERCU
+
+Xavier Paquet
+
+Charles Jussan
+
+Xavier Defer
+
+Kevin Hilairet
+
+Mathieu Larcelet
+
+Damien Crasbercu
+
 David Laguerre
 
