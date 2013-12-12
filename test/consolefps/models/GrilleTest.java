@@ -134,7 +134,6 @@ public class GrilleTest {
 		grid.ajouterElement(j);
 		grid.ajouterElement(j2);
 		j.deplacer(Sens.HAUT);
-		j2.deplacer(Sens.BAS);
 
 		// Assert
 		assertFalse(grid.isDansLaGrille(j.getPosition()));
@@ -152,6 +151,7 @@ public class GrilleTest {
 		List<Position> actual = grid.casesSuivantes(j);
 
 		// Assert
+		System.out.println(grid.afficherGrille());
 		List<Position> expected = new LinkedList<>();
 		expected.add(new Position(1, 0));
 		assertEquals(expected, actual);

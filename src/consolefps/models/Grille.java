@@ -108,10 +108,10 @@ public class Grille {
 	}
 
 	public boolean isDansLaGrille(final Position laPosition) {
-		if (laPosition.getX() > getNbColonnes()) {
+		if (laPosition.getX() >= getNbColonnes()) {
 			return false;
 		}
-		if (laPosition.getY() > getNbLignes()) {
+		if (laPosition.getY() >= getNbLignes()) {
 			return false;
 		}
 		if (laPosition.getX() < 0) {
@@ -124,13 +124,7 @@ public class Grille {
 	}
 
 	public boolean isValide(final Position laPosition) {
-
-		boolean valide = true;
-
-		valide = isDansLaGrille(laPosition);
-		valide = !isDecors(laPosition);
-
-		return valide;
+		return isDansLaGrille(laPosition) && !isDecors(laPosition);
 	}
 
 	public List<Position> casesSuivantes(final Actor acteur) {
