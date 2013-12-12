@@ -4,14 +4,14 @@ import consolefps.models.Position;
 
 public class Invincibilite extends Bonus {
 
-	public Invincibilite(Position position) {
+	public Invincibilite(final Position position) {
 		super(position);
 	}
-	
-	public Invincibilite(int x, int y) {
-		super(x,y);
+
+	public Invincibilite(final int x, final int y) {
+		super(x, y);
 	}
-	
+
 	@Override
 	public String afficher() {
 		return "[i]";

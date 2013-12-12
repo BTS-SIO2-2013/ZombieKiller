@@ -8,20 +8,21 @@ import consolefps.models.Position;
 
 /**
  * Affiche l'arme Fusil à Pompe, notifié [p]
+ * 
  * @author Tristan Ferie
  */
-public class FusilAPompe extends Arme{
-    
-    
-   public String afficher(){
-       return "[p]";
-    }
+public class FusilAPompe extends Arme {
 
-    public FusilAPompe(Position position) {
-        super(position);
-    }
+	@Override
+	public String afficher() {
+		return "[p]";
+	}
 
-    public FusilAPompe(int x, int y) {
-        super(x, y);
-    }
+	public FusilAPompe(final Position position) {
+		super(position);
+	}
+
+	public FusilAPompe(final int x, final int y) {
+		super(x, y);
+	}
 }

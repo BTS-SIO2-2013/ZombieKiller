@@ -4,15 +4,17 @@
  */
 package consolefps.controllers;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import consolefps.models.Grille;
-import consolefps.models.Position;
 import consolefps.models.Sens;
+import consolefps.models.elements.Joueur;
+import consolefps.models.elements.Zombie;
 import consolefps.models.elements.arme.Arme;
 import consolefps.models.elements.arme.FusilAPompe;
 import consolefps.models.elements.arme.Hache;
-import consolefps.models.elements.Joueur;
 import consolefps.models.elements.arme.Revolver;
-import consolefps.models.elements.Zombie;
 import consolefps.models.elements.bonus.Bonus;
 import consolefps.models.elements.bonus.Invincibilite;
 import consolefps.models.elements.bonus.Munitions;
@@ -20,8 +22,6 @@ import consolefps.models.elements.bonus.TrousseDeSoin;
 import consolefps.models.elements.decors.Decors;
 import consolefps.models.elements.decors.Mur;
 import consolefps.models.elements.decors.Vitre;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * 
@@ -48,39 +48,39 @@ public class Jeux implements ICLIControleur {
      */
 	public Jeux() {
 		this.grille = new Grille();
-		this.zombies = new LinkedList<Zombie>();
-		this.armes = new LinkedList<Arme>();
-		this.bonus = new LinkedList<Bonus>();
-		this.decors = new LinkedList<Decors>();
+		this.zombies = new LinkedList<>();
+		this.armes = new LinkedList<>();
+		this.bonus = new LinkedList<>();
+		this.decors = new LinkedList<>();
 		this.joueur = new Joueur(1, 1);
-		this.ajouterDecors(new Mur(0, 0));
-		this.ajouterDecors(new Mur(0, 1));
-		this.ajouterDecors(new Mur(0, 2));
-		this.ajouterDecors(new Mur(0, 3));
-		this.ajouterDecors(new Mur(0, 4));
-		this.ajouterDecors(new Mur(1, 0));
-		this.grille.ajouterElement(joueur);
-		this.ajouterBonus(new TrousseDeSoin(1, 2));
-		this.ajouterBonus(new Invincibilite(1, 3));
-		this.ajouterDecors(new Mur(1, 4));
-		this.ajouterDecors(new Vitre(2, 0));
-		this.ajouterArme(new Hache(2, 1));
-		this.ajouterBonus(new Munitions(2, 2));
-		this.ajouterDecors(new Mur(2, 3));
-		this.ajouterDecors(new Mur(2, 4));
-		this.ajouterDecors(new Mur(3, 0));
-		this.ajouterArme(new FusilAPompe(3, 1));
-		this.ajouterZombie(new Zombie(3, 2));
-		this.ajouterArme(new Revolver(3, 3));
-		this.ajouterDecors(new Mur(3, 4));
-		this.ajouterDecors(new Mur(4, 0));
-		this.ajouterDecors(new Mur(4, 1));
-		this.ajouterDecors(new Mur(4, 2));
-		this.ajouterDecors(new Mur(4, 3));
-		this.ajouterDecors(new Mur(4, 4));
+		ajouterDecors(new Mur(0, 0));
+		ajouterDecors(new Mur(0, 1));
+		ajouterDecors(new Mur(0, 2));
+		ajouterDecors(new Mur(0, 3));
+		ajouterDecors(new Mur(0, 4));
+		ajouterDecors(new Mur(1, 0));
+		this.grille.ajouterElement(this.joueur);
+		ajouterBonus(new TrousseDeSoin(1, 2));
+		ajouterBonus(new Invincibilite(1, 3));
+		ajouterDecors(new Mur(1, 4));
+		ajouterDecors(new Vitre(2, 0));
+		ajouterArme(new Hache(2, 1));
+		ajouterBonus(new Munitions(2, 2));
+		ajouterDecors(new Mur(2, 3));
+		ajouterDecors(new Mur(2, 4));
+		ajouterDecors(new Mur(3, 0));
+		ajouterArme(new FusilAPompe(3, 1));
+		ajouterZombie(new Zombie(3, 2));
+		ajouterArme(new Revolver(3, 3));
+		ajouterDecors(new Mur(3, 4));
+		ajouterDecors(new Mur(4, 0));
+		ajouterDecors(new Mur(4, 1));
+		ajouterDecors(new Mur(4, 2));
+		ajouterDecors(new Mur(4, 3));
+		ajouterDecors(new Mur(4, 4));
 	}
 
-	public Jeux(Menu menu) {
+	public Jeux(final Menu menu) {
 		this();
 		this.menu = menu;
 	}
@@ -97,61 +97,73 @@ public class Jeux implements ICLIControleur {
 		return this.zombies;
 	}
 
-	public void ajouterZombie(Zombie z) {
+	public void ajouterZombie(final Zombie z) {
 		this.zombies.add(z);
 		this.grille.ajouterElement(z);
 	}
 
-	public void ajouterBonus(Bonus b) {
+	public void ajouterBonus(final Bonus b) {
 		this.bonus.add(b);
 		this.grille.ajouterElement(b);
 	}
 
-	public void ajouterArme(Arme a) {
+	public void ajouterArme(final Arme a) {
 		this.armes.add(a);
 		this.grille.ajouterElement(a);
 	}
 
-	public void ajouterDecors(Decors d) {
+	public void ajouterDecors(final Decors d) {
 		this.decors.add(d);
 		this.grille.ajouterElement(d);
 	}
 
-	void deplacer(Joueur joueur, Sens sens) {
+	void deplacer(final Joueur joueur, final Sens sens) {
 		// if(this.joueur.positionSuivante(sens))
-		this.joueur.deplacer(sens);
+		joueur.deplacer(sens);
 	}
 
 	@Override
-	public ICLIControleur traitementCommande(Commande commande) {
-		
-		if ((Jeux.BAS.equals(commande))&&(!grille.isValide(joueur.positionSuivante(Sens.BAS)))
-				||((Jeux.HAUT.equals(commande))&&(!grille.isValide(joueur.positionSuivante(Sens.HAUT))))
-						||((Jeux.GAUCHE.equals(commande))&&(!grille.isValide(joueur.positionSuivante(Sens.GAUCHE))))||
-								((Jeux.DROITE.equals(commande))&&(!grille.isValide(joueur.positionSuivante(Sens.DROITE))))){
+	public ICLIControleur traitementCommande(final Commande commande) {
+
+		if (Jeux.BAS.equals(commande)
+				&& !this.grille
+						.isValide(this.joueur.positionSuivante(Sens.BAS))
+				|| Jeux.HAUT.equals(commande)
+				&& !this.grille.isValide(this.joueur
+						.positionSuivante(Sens.HAUT))
+				|| Jeux.GAUCHE.equals(commande)
+				&& !this.grille.isValide(this.joueur
+						.positionSuivante(Sens.GAUCHE))
+				|| Jeux.DROITE.equals(commande)
+				&& !this.grille.isValide(this.joueur
+						.positionSuivante(Sens.DROITE))) {
 			System.out.println("Bim le mur!");
 		}
 		if (Jeux.BAS.equals(commande)
-				&& grille.isValide(joueur.positionSuivante(Sens.BAS))) {
+				&& this.grille.isValide(this.joueur.positionSuivante(Sens.BAS))) {
 			this.joueur.deplacer(Sens.BAS);
 		}
 
 		if (Jeux.HAUT.equals(commande)
-				&& grille.isValide(joueur.positionSuivante(Sens.HAUT))) {
+				&& this.grille
+						.isValide(this.joueur.positionSuivante(Sens.HAUT))) {
 			this.joueur.deplacer(Sens.HAUT);
 		}
 		if (Jeux.GAUCHE.equals(commande)
-				&& grille.isValide(joueur.positionSuivante(Sens.GAUCHE))) {
+				&& this.grille.isValide(this.joueur
+						.positionSuivante(Sens.GAUCHE))) {
 			this.joueur.deplacer(Sens.GAUCHE);
 		}
 		if (Jeux.DROITE.equals(commande)
-				&& grille.isValide(joueur.positionSuivante(Sens.DROITE))) {
+				&& this.grille.isValide(this.joueur
+						.positionSuivante(Sens.DROITE))) {
 			this.joueur.deplacer(Sens.DROITE);
 		}
-		
-		// Compare la position du joueur a la position de chaque zombie, en cas d'egalite la partie se termine.
+
+		// Compare la position du joueur a la position de chaque zombie, en cas
+		// d'egalite la partie se termine.
 		for (Zombie element : this.zombies) {
-			if (joueur.getPosition().equals(element.getPosition())) {
+			if (this.joueur.getPosition().equals(element.getPosition())) {
 				System.out.println("GAMEOVER!");
 				return this.menu;
 			}
@@ -160,7 +172,7 @@ public class Jeux implements ICLIControleur {
 		if (Jeux.EXIT.equals(commande)) {
 			return this.menu;
 		}
-		
+
 		return this;
 	}
 

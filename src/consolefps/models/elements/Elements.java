@@ -9,37 +9,37 @@ import consolefps.models.Position;
 import consolefps.views.IAffichage;
 
 /**
- *
+ * 
  * @author krilivye
  */
-public abstract class Elements implements IPositionable,IAffichage {
+public abstract class Elements implements IPositionable, IAffichage {
 
-    private Position position;
+	private Position position;
 
-	
-    public Elements() {}
-
-    public Elements(Position position) {
-    	this.position = position;
-    }
-    
-    public Elements(int p_x, int p_y) {
-    	setPosition(p_x, p_y);
+	public Elements() {
 	}
 
-    @Override
-    public Position getPosition() {
-        return position;
-    }
+	public Elements(final Position position) {
+		this.position = position;
+	}
 
-    @Override
-    public void setPosition(Position position) {
-        this.position = position;
-    }
+	public Elements(final int p_x, final int p_y) {
+		setPosition(p_x, p_y);
+	}
 
-    @Override
-    public void setPosition(int x, int y) {
-        this.position = new Position(x, y);
-    }
-    
+	@Override
+	public Position getPosition() {
+		return this.position;
+	}
+
+	@Override
+	public void setPosition(final Position position) {
+		this.position = position;
+	}
+
+	@Override
+	public void setPosition(final int x, final int y) {
+		this.position = new Position(x, y);
+	}
+
 }

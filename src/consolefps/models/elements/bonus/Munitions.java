@@ -4,11 +4,11 @@ import consolefps.models.Position;
 
 public class Munitions extends Bonus {
 
-	public Munitions(int x, int y) {
-		super(x,y);
+	public Munitions(final int x, final int y) {
+		super(x, y);
 	}
-	
-	public Munitions(Position position) {
+
+	public Munitions(final Position position) {
 		super(position);
 	}
 
