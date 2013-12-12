@@ -4,85 +4,28 @@
  */
 package consolefps.models.elements;
 
-import consolefps.models.Sens;
 import consolefps.models.Position;
 
 /**
- *
+ * 
  * @author krilivye
  */
-public class Joueur extends Actor{
+public class Joueur extends Actor {
 
-    public Joueur(Position position) {
-        super(position);
-    }
+	public Joueur(final Position position) {
+		super(position);
+	}
 
-    public Joueur(int x, int y) {
-        super(x, y);
-    }
-    
-    
-    
-    public void afficherPosition() {
-        System.out.println(this.getPosition());
-    }
+	public Joueur(final int x, final int y) {
+		super(x, y);
+	}
 
-    @Override
-    public String afficher() {
-        return "[j]";
-    }
+	public void afficherPosition() {
+		System.out.println(this.getPosition());
+	}
 
-    public void deplacer(Sens sens) {
-        if (sens == Sens.BAS){
-            int y = this.getPosition().getY()+1;
-            this.getPosition().setY(y);
-            
-        }
-        if (sens == Sens.DROITE){
-            int x = this.getPosition().getX()+1;
-            this.getPosition().setX(x);
-        }
-        if (sens == Sens.GAUCHE){
-            int x = this.getPosition().getX()-1;
-            this.getPosition().setX(x);
-        }
-        if (sens == Sens.HAUT){
-            int y = this.getPosition().getY()-1;
-            this.getPosition().setY(y);
-        }
-        
-        
-    }
-
-    public Position positionSuivante(Sens leSens) {
-        Position laPositionSuivante = new Position(0, 0);
-        
-        if (leSens.equals(Sens.BAS)){
-        	int x = this.getPosition().getX();
-            int y = this.getPosition().getY()+1;
-            laPositionSuivante.setX(x);
-            laPositionSuivante.setY(y);
-            
-        }
-        if (leSens.equals(Sens.DROITE)){
-            int x = this.getPosition().getX()+1;
-            int y = this.getPosition().getY();
-            laPositionSuivante.setX(x);
-            laPositionSuivante.setY(y);
-        }
-        if (leSens.equals(Sens.GAUCHE)){
-            int x = this.getPosition().getX()-1;
-            int y = this.getPosition().getY();
-            laPositionSuivante.setX(x);
-            laPositionSuivante.setY(y);
-        }
-        if (leSens ==Sens.HAUT){
-        	int x = this.getPosition().getX();
-            int y = this.getPosition().getY()-1;
-            laPositionSuivante.setX(x);
-            laPositionSuivante.setY(y);
-        }
-        
-        return laPositionSuivante;
-    }
+	@Override
+	public String afficher() {
+		return "[j]";
+	}
 }
