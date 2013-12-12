@@ -5,8 +5,10 @@
 package consolefps.models;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
+import consolefps.models.elements.Actor;
 import consolefps.models.elements.Elements;
 import consolefps.models.elements.decors.Decors;
 
@@ -129,6 +131,26 @@ public class Grille {
 		valide = !isDecors(laPosition);
 
 		return valide;
+	}
+
+	public List<Position> casesSuivantes(final Actor acteur) {
+
+		List<Position> cases = new LinkedList<>();
+		if (isValide(acteur.positionSuivante(Sens.BAS))) {
+			cases.add(acteur.positionSuivante(Sens.BAS));
+
+		}
+		if (isValide(acteur.positionSuivante(Sens.HAUT))) {
+			cases.add(acteur.positionSuivante(Sens.HAUT));
+		}
+
+		if (isValide(acteur.positionSuivante(Sens.GAUCHE))) {
+			cases.add(acteur.positionSuivante(Sens.GAUCHE));
+		}
+		if (isValide(acteur.positionSuivante(Sens.DROITE))) {
+			cases.add(acteur.positionSuivante(Sens.DROITE));
+		}
+		return cases;
 	}
 
 }

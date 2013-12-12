@@ -9,6 +9,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.junit.Test;
 
 import consolefps.models.elements.Joueur;
@@ -137,4 +140,21 @@ public class GrilleTest {
 		assertFalse(grid.isDansLaGrille(j.getPosition()));
 		assertTrue(grid.isDansLaGrille(j2.getPosition()));
 	}
+
+	@Test
+	public void testCasesSuivantes() {
+		// Arrange
+		Grille grid = new Grille(2, 1);
+		Joueur j = new Joueur(0, 0);
+		grid.ajouterElement(j);
+
+		// Act
+		List<Position> actual = grid.casesSuivantes(j);
+
+		// Assert
+		List<Position> expected = new LinkedList<>();
+		expected.add(new Position(1, 0));
+		assertEquals(expected, actual);
+	}
+
 }
