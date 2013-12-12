@@ -41,6 +41,7 @@ public class Jeux implements ICLIControleur {
 	private final static Commande HAUT = new Commande("haut");
 	private final static Commande GAUCHE = new Commande("gauche");
 	private final static Commande DROITE = new Commande("droite");
+	private final static Commande ATTENDRE = new Commande("attendre");
 	private final static Commande EXIT = new Commande("exit");
 
 	/**
@@ -124,55 +125,40 @@ public class Jeux implements ICLIControleur {
 
 	@Override
 	public ICLIControleur traitementCommande(final Commande commande) {
-		if (Jeux.BAS.equals(commande)) {
-			this.joueur.deplacer(Sens.BAS);
-		}
-		if (Jeux.HAUT.equals(commande)) {
-			this.joueur.deplacer(Sens.HAUT);
-		}
-		if (Jeux.GAUCHE.equals(commande)) {
-			this.joueur.deplacer(Sens.GAUCHE);
-		}
-		if (Jeux.DROITE.equals(commande)) {
-			this.joueur.deplacer(Sens.DROITE);
-		}
 		if (Jeux.EXIT.equals(commande)) {
 			return this.menu;
 		}
-
-		if (Jeux.BAS.equals(commande)
-				&& !this.grille
-						.isValide(this.joueur.positionSuivante(Sens.BAS))
-				|| Jeux.HAUT.equals(commande)
-				&& !this.grille.isValide(this.joueur
-						.positionSuivante(Sens.HAUT))
-				|| Jeux.GAUCHE.equals(commande)
-				&& !this.grille.isValide(this.joueur
-						.positionSuivante(Sens.GAUCHE))
-				|| Jeux.DROITE.equals(commande)
-				&& !this.grille.isValide(this.joueur
-						.positionSuivante(Sens.DROITE))) {
-			System.out.println("Bim le mur!");
-		}
-		if (Jeux.BAS.equals(commande)
-				&& this.grille.isValide(this.joueur.positionSuivante(Sens.BAS))) {
-			this.joueur.deplacer(Sens.BAS);
+		if (Jeux.ATTENDRE.equals(commande)) {
+			// Ne fais rien
 		}
 
-		if (Jeux.HAUT.equals(commande)
-				&& this.grille
-						.isValide(this.joueur.positionSuivante(Sens.HAUT))) {
-			this.joueur.deplacer(Sens.HAUT);
+		if (Jeux.BAS.equals(commande)) {
+			if (this.grille.isValide(this.joueur.positionSuivante(Sens.BAS))) {
+				this.joueur.deplacer(Sens.BAS);
+			} else {
+				System.out.println("Bim le mur!");
+			}
 		}
-		if (Jeux.GAUCHE.equals(commande)
-				&& this.grille.isValide(this.joueur
-						.positionSuivante(Sens.GAUCHE))) {
-			this.joueur.deplacer(Sens.GAUCHE);
+		if (Jeux.HAUT.equals(commande)) {
+			if (this.grille.isValide(this.joueur.positionSuivante(Sens.HAUT))) {
+				this.joueur.deplacer(Sens.HAUT);
+			} else {
+				System.out.println("Bim le mur!");
+			}
 		}
-		if (Jeux.DROITE.equals(commande)
-				&& this.grille.isValide(this.joueur
-						.positionSuivante(Sens.DROITE))) {
-			this.joueur.deplacer(Sens.DROITE);
+		if (Jeux.DROITE.equals(commande)) {
+			if (this.grille.isValide(this.joueur.positionSuivante(Sens.DROITE))) {
+				this.joueur.deplacer(Sens.DROITE);
+			} else {
+				System.out.println("Bim le mur!");
+			}
+		}
+		if (Jeux.GAUCHE.equals(commande)) {
+			if (this.grille.isValide(this.joueur.positionSuivante(Sens.GAUCHE))) {
+				this.joueur.deplacer(Sens.GAUCHE);
+			} else {
+				System.out.println("Bim le mur!");
+			}
 		}
 
 		// Compare la position du joueur a la position de chaque zombie, en cas

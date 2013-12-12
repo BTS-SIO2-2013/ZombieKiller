@@ -8,6 +8,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import consolefps.models.Position;
 import consolefps.models.elements.Zombie;
 
 /**
@@ -58,7 +59,21 @@ public class JeuxTest {
 
 		// Assert
 		assertTrue(jeux.getJoueur().getPosition().getX() == 1);
-		assertTrue(jeux.getJoueur().getPosition().getY() == 2);
+	}
+
+	@Test
+	public void testNeFaitRien() {
+		// Arrange
+		Jeux jeux = new Jeux();
+		Commande com = new Commande("attendre");
+		Position posAvant = jeux.getJoueur().getPosition();
+
+		// Act
+		jeux.traitementCommande(com);
+
+		// Assert
+		assertTrue(jeux.getJoueur().getPosition().getX() == posAvant.getX());
+		assertTrue(jeux.getJoueur().getPosition().getY() == posAvant.getY());
 	}
 
 }
