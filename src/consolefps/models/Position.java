@@ -56,4 +56,7 @@ public class Position {
 		return super.hashCode();
 	}
 
+	public double distance(Position p) {
+		return Math.sqrt(Math.pow(this.getY() - p.getY(), 2) + Math.pow(this.getX() - p.getX(), 2));
+	}
 }
