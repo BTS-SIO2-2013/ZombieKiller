@@ -41,9 +41,7 @@ public class CLITest {
 	public void possedeUnInputParDefaut() {
 		// Arrange
 		CLI menu = new CLI();
-
-		// Act
-		try (BufferedReader in = menu.getInput();) {
+		try (BufferedReader in = menu.getInput()) {
 			// Assert
 			assertTrue(in != null);
 		} catch (IOException e) {
