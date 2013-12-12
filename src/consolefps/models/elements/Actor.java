@@ -45,7 +45,7 @@ public abstract class Actor extends Elements {
 	}
 
 	public Position positionSuivante(final Sens leSens) {
-		Position laPositionSuivante = new Position(0, 0);
+		Position laPositionSuivante = this.getPosition();
 
 		if (leSens.equals(Sens.BAS)) {
 			int x = this.getPosition().getX();
