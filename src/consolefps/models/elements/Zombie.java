@@ -5,25 +5,24 @@
 package consolefps.models.elements;
 
 import consolefps.models.Position;
-import consolefps.views.IAffichage;
 
 /**
- *
+ * 
  * @author krilivye
  */
-public class Zombie extends Actor implements  IAffichage{
+public class Zombie extends Actor {
 
-    public Zombie(Position position) {
-        super(position);
-    }
+	public Zombie(final Position position) {
+		super(position);
+	}
 
-    public Zombie(int x, int y) {
-        super(x, y);
-    }
+	public Zombie(final int x, final int y) {
+		super(x, y);
+	}
 
-    @Override
-    public String afficher() {
-        return "[z]";
-    }
-    
+	@Override
+	public String afficher() {
+		return "[z]";
+	}
+
 }
