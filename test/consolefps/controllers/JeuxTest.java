@@ -58,7 +58,7 @@ public class JeuxTest {
 		jeux.traitementCommande(com);
 
 		// Assert
-		assertTrue(jeux.getJoueur().getPosition().getX() == 1);
+		assertTrue(jeux.getJoueur().getPosition().getY() == 2);
 	}
 
 	@Test

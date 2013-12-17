@@ -2,12 +2,14 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package consolefps.models;
+package consolefps.models.elements;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import consolefps.models.Position;
+import consolefps.models.Sens;
 import consolefps.models.elements.Joueur;
 
 /**

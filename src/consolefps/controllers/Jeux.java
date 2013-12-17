@@ -7,6 +7,9 @@ package consolefps.controllers;
 import java.util.LinkedList;
 import java.util.List;
 
+import consolefps.controllers.actions.DeplacementAction;
+import consolefps.controllers.actions.ExitAction;
+import consolefps.controllers.actions.NeRienFaireAction;
 import consolefps.models.Grille;
 import consolefps.models.Sens;
 import consolefps.models.elements.Joueur;
@@ -27,7 +30,7 @@ import consolefps.models.elements.decors.Vitre;
  * 
  * @author krilivye
  */
-public class Jeux implements ICLIControleur {
+public class Jeux extends Controlleur {
 
 	private final Joueur joueur;
 	private final Grille grille;
@@ -37,23 +40,34 @@ public class Jeux implements ICLIControleur {
 	private final List<Decors> decors;
 	private Menu menu;
 
-	private final static Commande BAS = new Commande("bas");
-	private final static Commande HAUT = new Commande("haut");
-	private final static Commande GAUCHE = new Commande("gauche");
-	private final static Commande DROITE = new Commande("droite");
-	private final static Commande ATTENDRE = new Commande("attendre");
-	private final static Commande EXIT = new Commande("exit");
-
 	/**
      *
      */
 	public Jeux() {
+		super();
 		this.grille = new Grille();
 		this.zombies = new LinkedList<>();
 		this.armes = new LinkedList<>();
 		this.bonus = new LinkedList<>();
 		this.decors = new LinkedList<>();
 		this.joueur = new Joueur(1, 1);
+
+		initialiserLeJeux();
+
+		ajouterCommandeAction(new Commande("bas"), new DeplacementAction(
+				Sens.BAS, this));
+		ajouterCommandeAction(new Commande("attendre"), new NeRienFaireAction(
+				this));
+		ajouterCommandeAction(new Commande("haut"), new DeplacementAction(
+				Sens.HAUT, this));
+		ajouterCommandeAction(new Commande("gauche"), new DeplacementAction(
+				Sens.GAUCHE, this));
+		ajouterCommandeAction(new Commande("droite"), new DeplacementAction(
+				Sens.DROITE, this));
+		ajouterCommandeAction(new Commande("exit"), new ExitAction(this.menu));
+	}
+
+	private void initialiserLeJeux() {
 		ajouterDecors(new Mur(0, 0));
 		ajouterDecors(new Mur(0, 1));
 		ajouterDecors(new Mur(0, 2));
@@ -125,41 +139,8 @@ public class Jeux implements ICLIControleur {
 
 	@Override
 	public ICLIControleur traitementCommande(final Commande commande) {
-		if (Jeux.EXIT.equals(commande)) {
-			return this.menu;
-		}
-		if (Jeux.ATTENDRE.equals(commande)) {
-			// Ne fais rien
-		}
 
-		if (Jeux.BAS.equals(commande)) {
-			if (this.grille.isValide(this.joueur.positionSuivante(Sens.BAS))) {
-				this.joueur.deplacer(Sens.BAS);
-			} else {
-				System.out.println("Bim le mur!");
-			}
-		}
-		if (Jeux.HAUT.equals(commande)) {
-			if (this.grille.isValide(this.joueur.positionSuivante(Sens.HAUT))) {
-				this.joueur.deplacer(Sens.HAUT);
-			} else {
-				System.out.println("Bim le mur!");
-			}
-		}
-		if (Jeux.DROITE.equals(commande)) {
-			if (this.grille.isValide(this.joueur.positionSuivante(Sens.DROITE))) {
-				this.joueur.deplacer(Sens.DROITE);
-			} else {
-				System.out.println("Bim le mur!");
-			}
-		}
-		if (Jeux.GAUCHE.equals(commande)) {
-			if (this.grille.isValide(this.joueur.positionSuivante(Sens.GAUCHE))) {
-				this.joueur.deplacer(Sens.GAUCHE);
-			} else {
-				System.out.println("Bim le mur!");
-			}
-		}
+		ICLIControleur ctrl = super.traitementCommande(commande);
 
 		// Compare la position du joueur a la position de chaque zombie, en cas
 		// d'egalite la partie se termine.
@@ -170,11 +151,7 @@ public class Jeux implements ICLIControleur {
 			}
 		}
 
-		if (Jeux.EXIT.equals(commande)) {
-			return this.menu;
-		}
-
-		return this;
+		return ctrl;
 	}
 
 	@Override

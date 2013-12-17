@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package consolefps;
+package consolefps.client.console;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -14,6 +14,7 @@ import java.io.StringReader;
 
 import org.junit.Test;
 
+import consolefps.client.console.CLI;
 import consolefps.controllers.ICLIControleur;
 import consolefps.views.ExitOption;
 

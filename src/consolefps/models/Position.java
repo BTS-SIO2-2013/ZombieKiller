@@ -56,7 +56,17 @@ public class Position {
 		return super.hashCode();
 	}
 
-	public double distance(Position p) {
-		return Math.sqrt(Math.pow(this.getY() - p.getY(), 2) + Math.pow(this.getX() - p.getX(), 2));
+	public double distance(final Position p) {
+		return Math.sqrt(Math.pow(getY() - p.getY(), 2)
+				+ Math.pow(getX() - p.getX(), 2));
+	}
+
+	public void deplacerSelonX(final int dx) {
+		this.x += dx;
+
+	}
+
+	public void deplacerSelonY(final int dy) {
+		this.y += dy;
 	}
 }

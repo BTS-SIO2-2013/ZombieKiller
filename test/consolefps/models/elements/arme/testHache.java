@@ -1,4 +1,4 @@
-package consolefps.models;
+package consolefps.models.elements.arme;
 
 import static org.junit.Assert.*;
 

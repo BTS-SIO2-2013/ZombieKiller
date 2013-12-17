@@ -9,21 +9,18 @@ import consolefps.models.elements.Elements;
  */
 
 /**
- *
+ * 
  * @author krilivye
  */
-public abstract class  Arme extends Elements{
+public abstract class Arme extends Elements {
 
-    public Arme(Position position) {
+	public Arme(final Position position) {
 		super(position);
-		
+
 	}
-    public Arme(int x,int y){
-    	super(x, y);
-    }
-	@Override
-    public abstract String afficher();
-        
-    
-    
+
+	public Arme(final int x, final int y) {
+		super(x, y);
+	}
+
 }

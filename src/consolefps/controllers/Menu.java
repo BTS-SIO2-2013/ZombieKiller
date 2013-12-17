@@ -4,47 +4,21 @@
  */
 package consolefps.controllers;
 
-import consolefps.views.ExitOption;
-import consolefps.views.noValideOptionMenu;
+import consolefps.controllers.actions.JeuxAction;
+import consolefps.controllers.actions.OptionsAction;
+import consolefps.controllers.actions.QuitAction;
 
 /**
  * 
  * @author krilivye
  */
-public class Menu implements ICLIControleur {
-	private final noValideOptionMenu noValideOptionMenu;
-	private ICLIControleur jeux;
-	private ICLIControleur options;
-	private ICLIControleur exitOption;
-	private Commande JEU;
-	private Commande OPTIONS;
-	private Commande EXIT;
+public class Menu extends Controlleur {
 
 	public Menu() {
-		this.noValideOptionMenu = new noValideOptionMenu(this);
-		this.jeux = new Jeux(this);
-		this.options = new Options();
-		this.exitOption = new ExitOption();
-		this.JEU = new Commande("1");
-		this.OPTIONS = new Commande("2");
-		this.EXIT = new Commande("3");
-	}
+		ajouterCommandeAction(new Commande("1"), new JeuxAction(this));
+		ajouterCommandeAction(new Commande("2"), new OptionsAction());
+		ajouterCommandeAction(new Commande("3"), new QuitAction());
 
-	public ICLIControleur choisir(final Commande com) {
-
-		if (com.equals(this.JEU)) {
-			return this.jeux;
-		}
-
-		if (com.equals(this.OPTIONS)) {
-			return this.options;
-		}
-
-		if (com.equals(this.EXIT)) {
-			return this.exitOption;
-		}
-
-		return this.noValideOptionMenu;
 	}
 
 	@Override
@@ -55,6 +29,7 @@ public class Menu implements ICLIControleur {
 
 	@Override
 	public ICLIControleur traitementCommande(final Commande commande) {
-		return choisir(commande);
+		ICLIControleur ctrl = super.traitementCommande(commande);
+		return ctrl;
 	}
 }

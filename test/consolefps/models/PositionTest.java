@@ -35,4 +35,28 @@ public class PositionTest {
 		// Assert
 		assertTrue(res == Math.sqrt(17));
 	}
+
+	@Test
+	public void deplacerSelonX() {
+		// Arrange
+		Position pos = new Position(1, 1);
+
+		// Act
+		pos.deplacerSelonX(1);
+
+		// Assert
+		assertTrue(pos.getX() == 2);
+	}
+
+	@Test
+	public void deplacerSelonY() {
+		// Arrange
+		Position pos = new Position(1, 1);
+
+		// Act
+		pos.deplacerSelonY(1);
+
+		// Assert
+		assertTrue(pos.getY() == 2);
+	}
 }

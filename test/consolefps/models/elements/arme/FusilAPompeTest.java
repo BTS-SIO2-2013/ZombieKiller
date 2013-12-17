@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package consolefps.models;
+package consolefps.models.elements.arme;
 import static org.junit.Assert.*;
 import consolefps.models.elements.arme.FusilAPompe;
 

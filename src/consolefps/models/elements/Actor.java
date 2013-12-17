@@ -24,56 +24,11 @@ public abstract class Actor extends Elements {
 	}
 
 	public void deplacer(final Sens sens) {
-		if (sens == Sens.BAS) {
-			int y = getPosition().getY() + 1;
-			getPosition().setY(y);
-
-		}
-		if (sens == Sens.DROITE) {
-			int x = getPosition().getX() + 1;
-			getPosition().setX(x);
-		}
-		if (sens == Sens.GAUCHE) {
-			int x = getPosition().getX() - 1;
-			getPosition().setX(x);
-		}
-		if (sens == Sens.HAUT) {
-			int y = getPosition().getY() - 1;
-			getPosition().setY(y);
-		}
-
+		sens.deplacer(getPosition());
 	}
 
 	public Position positionSuivante(final Sens leSens) {
-		Position laPositionSuivante = new Position(0, 0);
-
-		if (leSens.equals(Sens.BAS)) {
-			int x = getPosition().getX();
-			int y = getPosition().getY() + 1;
-			laPositionSuivante.setX(x);
-			laPositionSuivante.setY(y);
-
-		}
-		if (leSens.equals(Sens.DROITE)) {
-			int x = getPosition().getX() + 1;
-			int y = getPosition().getY();
-			laPositionSuivante.setX(x);
-			laPositionSuivante.setY(y);
-		}
-		if (leSens.equals(Sens.GAUCHE)) {
-			int x = getPosition().getX() - 1;
-			int y = getPosition().getY();
-			laPositionSuivante.setX(x);
-			laPositionSuivante.setY(y);
-		}
-		if (leSens == Sens.HAUT) {
-			int x = getPosition().getX();
-			int y = getPosition().getY() - 1;
-			laPositionSuivante.setX(x);
-			laPositionSuivante.setY(y);
-		}
-
-		return laPositionSuivante;
+		return leSens.positionSuivante(getPosition());
 	}
 
 	@Override
