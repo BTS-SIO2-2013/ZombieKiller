@@ -10,7 +10,7 @@ public class Controlleur implements ICLIControleur {
 	private final Map<Commande, Action> listeDesCommandesActions;
 
 	public Controlleur() {
-		this.listeDesCommandesActions = new HashMap<Commande, Action>();
+		this.listeDesCommandesActions = new HashMap<>();
 
 	}
 
