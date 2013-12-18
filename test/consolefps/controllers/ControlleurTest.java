@@ -11,7 +11,7 @@ public class ControlleurTest {
 	@Test
 	public void testNeFaitRien() {
 		// Arrange
-		Controlleur unControlleur = new Controlleur();
+		Controlleur unControlleur = new ControlleurImpl();
 		Commande com = new Commande("attendre");
 		Action uneAction = new Action();
 
@@ -26,7 +26,7 @@ public class ControlleurTest {
 	@Test
 	public void effectuerAction() {
 		// Arrange
-		Controlleur unControlleur = new Controlleur();
+		Controlleur unControlleur = new ControlleurImpl();
 		Commande com = new Commande("attendre");
 		Action uneAction = new Action();
 		unControlleur.ajouterCommandeAction(com, uneAction);
@@ -38,5 +38,13 @@ public class ControlleurTest {
 
 		// Assert
 		assertTrue(uneAction.getNbExecute() == 3);
+	}
+
+	public class ControlleurImpl extends Controlleur {
+		@Override
+		public String affichage() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 	}
 }

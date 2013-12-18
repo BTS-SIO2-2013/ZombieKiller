@@ -25,6 +25,7 @@ import consolefps.models.elements.bonus.TrousseDeSoin;
 import consolefps.models.elements.decors.Decors;
 import consolefps.models.elements.decors.Mur;
 import consolefps.models.elements.decors.Vitre;
+import consolefps.views.View;
 
 /**
  * 
@@ -39,6 +40,7 @@ public class Jeux extends Controlleur {
 	private final List<Arme> armes;
 	private final List<Decors> decors;
 	private Menu menu;
+	private View view;
 
 	/**
      *
@@ -51,6 +53,8 @@ public class Jeux extends Controlleur {
 		this.bonus = new LinkedList<>();
 		this.decors = new LinkedList<>();
 		this.joueur = new Joueur(1, 1);
+
+		this.view = new View();
 
 		initialiserLeJeux();
 
@@ -132,11 +136,6 @@ public class Jeux extends Controlleur {
 		this.grille.ajouterElement(d);
 	}
 
-	void deplacer(final Joueur joueur, final Sens sens) {
-		// if(this.joueur.positionSuivante(sens))
-		joueur.deplacer(sens);
-	}
-
 	@Override
 	public ICLIControleur traitementCommande(final Commande commande) {
 
@@ -154,9 +153,12 @@ public class Jeux extends Controlleur {
 		return ctrl;
 	}
 
+	public View getView() {
+		return this.view;
+	}
+
 	@Override
 	public String affichage() {
 		return this.grille.afficherGrille();
-
 	}
 }

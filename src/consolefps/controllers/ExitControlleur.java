@@ -2,18 +2,15 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package consolefps.views;
-
-import consolefps.controllers.Commande;
-import consolefps.controllers.ICLIControleur;
+package consolefps.controllers;
 
 /**
  * 
  * @author krilivye
  */
-public class ExitOption implements ICLIControleur {
+public class ExitControlleur extends Controlleur {
 
-	public ExitOption() {
+	public ExitControlleur() {
 	}
 
 	@Override
@@ -24,6 +21,12 @@ public class ExitOption implements ICLIControleur {
 	@Override
 	public ICLIControleur traitementCommande(final Commande commande) {
 		return this;
+	}
+
+	@Override
+	public String afficherViews() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

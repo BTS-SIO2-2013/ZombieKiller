@@ -26,10 +26,4 @@ public class Menu extends Controlleur {
 		return "Super Zombie Killer\n" + "1 - Jouer\n" + "2 - Options\n"
 				+ "3 - Sortir\n";
 	}
-
-	@Override
-	public ICLIControleur traitementCommande(final Commande commande) {
-		ICLIControleur ctrl = super.traitementCommande(commande);
-		return ctrl;
-	}
 }

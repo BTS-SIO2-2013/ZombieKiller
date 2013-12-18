@@ -11,9 +11,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import consolefps.controllers.Commande;
+import consolefps.controllers.ExitControlleur;
 import consolefps.controllers.ICLIControleur;
 import consolefps.controllers.Menu;
-import consolefps.views.ExitOption;
 
 /**
  * 
@@ -74,7 +74,7 @@ public class CLI {
 	}
 
 	private boolean isExitCondition() {
-		if (this.controlleur instanceof ExitOption) {
+		if (this.controlleur instanceof ExitControlleur) {
 			return true;
 		}
 		return false;

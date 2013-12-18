@@ -10,6 +10,7 @@ import org.junit.Test;
 
 import consolefps.models.Position;
 import consolefps.models.elements.Zombie;
+import consolefps.views.View;
 
 /**
  * 
@@ -74,6 +75,18 @@ public class JeuxTest {
 		// Assert
 		assertTrue(jeux.getJoueur().getPosition().getX() == posAvant.getX());
 		assertTrue(jeux.getJoueur().getPosition().getY() == posAvant.getY());
+	}
+
+	@Test
+	public void testContientLaVueDuJeu() {
+		// Arrange
+		Jeux jeux = new Jeux();
+
+		// Act
+		View gameView = jeux.getView();
+
+		// Assert
+		assertTrue(gameView != null);
 	}
 
 }

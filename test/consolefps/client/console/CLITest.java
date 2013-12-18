@@ -15,8 +15,8 @@ import java.io.StringReader;
 import org.junit.Test;
 
 import consolefps.client.console.CLI;
+import consolefps.controllers.ExitControlleur;
 import consolefps.controllers.ICLIControleur;
-import consolefps.views.ExitOption;
 
 /**
  * 
@@ -74,7 +74,7 @@ public class CLITest {
 		BufferedReader in = new BufferedReader(new StringReader("3"));
 		CLI cli = new CLI();
 		cli.setInput(in);
-		ICLIControleur ctrl = new ExitOption();
+		ICLIControleur ctrl = new ExitControlleur();
 		cli.setControlleur(ctrl);
 
 		// Act

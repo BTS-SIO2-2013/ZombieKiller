@@ -4,22 +4,26 @@
  */
 package consolefps.controllers;
 
-
 /**
- *
+ * 
  * @author krilivye
  */
 public class Options implements ICLIControleur {
 
+	@Override
+	public String affichage() {
+		throw new UnsupportedOperationException("Not supported yet.");
+	}
 
-    @Override
-    public String affichage() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+	@Override
+	public ICLIControleur traitementCommande(final Commande commande) {
+		throw new UnsupportedOperationException("Not supported yet.");
+	}
 
-    @Override
-    public ICLIControleur traitementCommande(Commande commande) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-    
+	@Override
+	public String afficherViews() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

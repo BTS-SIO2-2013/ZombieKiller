@@ -5,12 +5,14 @@
 package consolefps.controllers;
 
 /**
- *
+ * 
  * @author krilivye
  */
 public interface ICLIControleur {
+	public ICLIControleur traitementCommande(Commande commande);
 
-    public String affichage();
-    public ICLIControleur traitementCommande(Commande commande);
-    
+	public String afficherViews();
+
+	public String affichage();
+
 }
