@@ -17,6 +17,7 @@ import org.junit.Test;
 import consolefps.models.elements.Joueur;
 import consolefps.models.elements.arme.Hache;
 import consolefps.models.elements.decors.Mur;
+import consolefps.views.GrilleView;
 
 /**
  * 
@@ -36,58 +37,6 @@ public class GrilleTest {
 		assertEquals(5, grid.getNbColonnes());
 		assertEquals(5, grid.getNbLignes());
 		assertTrue(grid.getElements() != null);
-	}
-
-	@Test
-	public void testEntete() {
-		// Arrange
-		Grille grid = new Grille();
-
-		// Act
-		String s = grid.entete();
-
-		// Assert
-		assertEquals("  0  1  2  3  4 \n", s);
-
-	}
-
-	@Test
-	public void testCaseVide() {
-		// Arrange
-		Grille grid = new Grille();
-
-		// Act
-		String s = grid.caseVide();
-
-		// Assert
-		assertEquals("[ ]", s);
-
-	}
-
-	@Test
-	public void afficherLigne() {
-		// Arrange
-		Grille grid = new Grille();
-
-		// Act
-		String s = grid.afficherLigne(0);
-
-		// Assert
-		assertEquals("0[ ][ ][ ][ ][ ]\n", s);
-	}
-
-	@Test
-	public void testafficherGrille() {
-		// Arrange
-		Grille grid = new Grille();
-		grid.setNblignes(2);
-		grid.setNbColonnes(2);
-
-		// Act
-		String s = grid.afficherGrille();
-
-		// Assert
-		assertEquals(grid.entete() + "0[ ][ ]\n" + "1[ ][ ]\n", s);
 	}
 
 	@Test
@@ -146,12 +95,13 @@ public class GrilleTest {
 		Grille grid = new Grille(2, 1);
 		Joueur j = new Joueur(0, 0);
 		grid.ajouterElement(j);
+		GrilleView gridview = new GrilleView(grid);
 
 		// Act
 		List<Position> actual = grid.casesSuivantes(j);
 
 		// Assert
-		System.out.println(grid.afficherGrille());
+		System.out.println(gridview.afficherGrille());
 		List<Position> expected = new LinkedList<>();
 		expected.add(new Position(1, 0));
 		assertEquals(expected, actual);

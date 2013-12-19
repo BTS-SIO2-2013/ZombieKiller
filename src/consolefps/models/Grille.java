@@ -41,48 +41,8 @@ public class Grille {
 		this.objets = new ArrayList<>();
 	}
 
-	public String afficherGrille() {
-		String retour = entete();
-
-		for (int y = 0; y < this.nbLignes; y++) {
-			retour += afficherLigne(y);
-		}
-		return retour;
-	}
-
 	public void ajouterElement(final Elements e) {
 		this.objets.add(e);
-	}
-
-	public String entete() {
-		String str = " ";
-		for (int i = 0; i < this.nbColonnes; i++) {
-			str += " " + i + " ";
-		}
-		return str + "\n";
-	}
-
-	public String caseVide() {
-		return "[ ]";
-	}
-
-	public String afficherLigne(final int i) {
-		String retour = "" + i;
-		for (int x = 0; x < this.nbColonnes; x++) {
-			Position courante = new Position(x, i);
-
-			boolean aAfficher = false;
-			for (Elements objet : this.objets) {
-				if (objet.getPosition().equals(courante)) {
-					retour += objet.afficher();
-					aAfficher = true;
-				}
-			}
-			if (!aAfficher) {
-				retour += caseVide();
-			}
-		}
-		return retour + "\n";
 	}
 
 	public List<Elements> getElements() {
@@ -145,6 +105,10 @@ public class Grille {
 			cases.add(acteur.positionSuivante(Sens.DROITE));
 		}
 		return cases;
+	}
+
+	public List<Elements> getObjets() {
+		return this.objets;
 	}
 
 }
