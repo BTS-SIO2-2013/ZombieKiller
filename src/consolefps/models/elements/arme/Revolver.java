@@ -11,10 +11,4 @@ public class Revolver extends Arme {
 	public Revolver(final Position position) {
 		super(position);
 	}
-
-	@Override
-	public String afficher() {
-		return "[r]";
-	}
-
 }

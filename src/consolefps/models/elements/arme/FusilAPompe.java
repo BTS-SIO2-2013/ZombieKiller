@@ -14,9 +14,6 @@ import consolefps.models.Position;
 public class FusilAPompe extends Arme {
 
 	@Override
-	public String afficher() {
-		return "[p]";
-	}
 
 	public FusilAPompe(final Position position) {
 		super(position);
