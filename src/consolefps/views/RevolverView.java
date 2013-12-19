@@ -4,4 +4,5 @@ public class RevolverView {
 	
 	public String afficher() {
 		return "[r]";
+	}
 }
