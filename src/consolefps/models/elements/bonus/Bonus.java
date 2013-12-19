@@ -13,7 +13,4 @@ public abstract class Bonus extends Elements {
 		super(x, y);
 	}
 
-	@Override
-	public abstract String afficher();
-
 }

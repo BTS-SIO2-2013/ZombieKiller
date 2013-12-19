@@ -12,9 +12,4 @@ public class Invincibilite extends Bonus {
 		super(x, y);
 	}
 
-	@Override
-	public String afficher() {
-		return "[i]";
-	}
-
 }

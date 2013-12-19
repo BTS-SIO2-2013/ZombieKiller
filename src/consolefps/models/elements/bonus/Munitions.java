@@ -11,10 +11,4 @@ public class Munitions extends Bonus {
 	public Munitions(final Position position) {
 		super(position);
 	}
-
-	@Override
-	public String afficher() {
-		return "[m]";
-	}
-
 }

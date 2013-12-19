@@ -21,11 +21,7 @@ public class Joueur extends Actor {
 	}
 
 	public void afficherPosition() {
-		System.out.println(this.getPosition());
+		System.out.println(getPosition());
 	}
 
-	@Override
-	public String afficher() {
-		return "[j]";
-	}
 }

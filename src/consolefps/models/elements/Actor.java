@@ -31,7 +31,4 @@ public abstract class Actor extends Elements {
 		return leSens.positionSuivante(getPosition());
 	}
 
-	@Override
-	public abstract String afficher();
-
 }

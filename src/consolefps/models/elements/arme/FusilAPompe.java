@@ -13,8 +13,6 @@ import consolefps.models.Position;
  */
 public class FusilAPompe extends Arme {
 
-	@Override
-
 	public FusilAPompe(final Position position) {
 		super(position);
 	}

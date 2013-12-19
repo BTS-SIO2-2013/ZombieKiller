@@ -6,13 +6,12 @@ package consolefps.models.elements;
 
 import consolefps.models.IPositionable;
 import consolefps.models.Position;
-import consolefps.views.IAffichage;
 
 /**
  * 
  * @author krilivye
  */
-public abstract class Elements implements IPositionable, IAffichage {
+public abstract class Elements implements IPositionable {
 
 	private Position position;
 

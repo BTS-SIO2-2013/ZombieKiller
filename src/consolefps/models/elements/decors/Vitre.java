@@ -9,22 +9,17 @@ package consolefps.models.elements.decors;
 import consolefps.models.Position;
 
 /**
- *
+ * 
  * @author Kévin
  */
 public class Vitre extends Decors {
 
-    public Vitre(Position position) {
-        super(position);
-    }
+	public Vitre(final Position position) {
+		super(position);
+	}
 
-    public Vitre(int x, int y) {
-        super(x, y);
-    }
-    
-    
-    @Override
-    public String afficher() {
-            return "[v]";
-    }
+	public Vitre(final int x, final int y) {
+		super(x, y);
+	}
+
 }

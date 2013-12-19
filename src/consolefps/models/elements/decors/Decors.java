@@ -10,21 +10,17 @@ import consolefps.models.Position;
 import consolefps.models.elements.Elements;
 
 /**
- *
+ * 
  * @author Kévin
  */
-public abstract class Decors extends Elements{
+public abstract class Decors extends Elements {
 
-    @Override
-    public abstract String afficher();
+	public Decors(final Position position) {
+		super(position);
+	}
 
-    public Decors(Position position) {
-        super(position);
-    }
+	public Decors(final int x, final int y) {
+		super(x, y);
+	}
 
-    
-    public Decors(int x, int y) {
-        super(x, y);
-    }
-    
 }

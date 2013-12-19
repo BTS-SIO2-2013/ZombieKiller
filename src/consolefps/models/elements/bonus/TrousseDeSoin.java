@@ -11,9 +11,4 @@ public class TrousseDeSoin extends Bonus {
 	public TrousseDeSoin(final int x, final int y) {
 		super(x, y);
 	}
-
-	@Override
-	public String afficher() {
-		return "[s]";
-	}
 }

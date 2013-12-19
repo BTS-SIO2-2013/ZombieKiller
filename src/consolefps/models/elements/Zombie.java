@@ -20,9 +20,4 @@ public class Zombie extends Actor {
 		super(x, y);
 	}
 
-	@Override
-	public String afficher() {
-		return "[z]";
-	}
-
 }
