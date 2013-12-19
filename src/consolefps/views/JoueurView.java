@@ -3,13 +3,14 @@
  */
 package consolefps.views;
 
+import consolefps.models.elements.Elements;
 import consolefps.models.elements.Joueur;
 
 /**
  * @author alexis
  * 
  */
-public class JoueurView extends ActorView {
+public class JoueurView extends ElementsView {
 
 	private Joueur joueur;
 
@@ -17,7 +18,11 @@ public class JoueurView extends ActorView {
 	 * 
 	 */
 	public JoueurView(final Joueur joueur) {
-		this.setJoueur(joueur);
+		setJoueur(joueur);
+	}
+
+	public JoueurView() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public Joueur getJoueur() {
@@ -29,8 +34,11 @@ public class JoueurView extends ActorView {
 	}
 
 	@Override
-	public String afficher() {
-		return "[j]";
+	public String afficher(final Elements joueur) {
+		if (joueur instanceof Joueur) {
+			return "[j]";
+		}
+		return "";
 	}
 
 }

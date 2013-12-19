@@ -4,11 +4,13 @@
  */
 package consolefps.views;
 
+import consolefps.models.elements.Elements;
+
 /**
- *
+ * 
  * @author krilivye
  */
 public interface IAffichage {
-    public String afficher();
-    
+	public String afficher(Elements element);
+
 }

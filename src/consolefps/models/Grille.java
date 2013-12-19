@@ -45,14 +45,6 @@ public class Grille {
 		this.objets.add(e);
 	}
 
-	public String entete() {
-		String str = " ";
-		for (int i = 0; i < this.nbColonnes; i++) {
-			str += " " + i + " ";
-		}
-		return str + "\n";
-	}
-
 	public List<Elements> getElements() {
 		return this.objets;
 	}
@@ -113,6 +105,10 @@ public class Grille {
 			cases.add(acteur.positionSuivante(Sens.DROITE));
 		}
 		return cases;
+	}
+
+	public List<Elements> getObjets() {
+		return this.objets;
 	}
 
 }

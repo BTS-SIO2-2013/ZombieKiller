@@ -5,6 +5,7 @@ package consolefps.views;
 
 import java.util.List;
 
+import consolefps.models.elements.Elements;
 import consolefps.models.elements.Zombie;
 
 /**
@@ -19,7 +20,7 @@ public class ZombieView extends ActorView {
 	 * 
 	 */
 	public ZombieView(final List<Zombie> zombies) {
-		this.setZombies(zombies);
+		setZombies(zombies);
 	}
 
 	public List<Zombie> getZombies() {
@@ -31,8 +32,11 @@ public class ZombieView extends ActorView {
 	}
 
 	@Override
-	public String afficher() {
-		return "[z]";
+	public String afficher(final Elements zombie) {
+		if (zombie instanceof Zombie) {
+			return "[z]";
+		}
+		return "";
 	}
 
 }

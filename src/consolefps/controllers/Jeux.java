@@ -25,6 +25,7 @@ import consolefps.models.elements.bonus.TrousseDeSoin;
 import consolefps.models.elements.decors.Decors;
 import consolefps.models.elements.decors.Mur;
 import consolefps.models.elements.decors.Vitre;
+import consolefps.views.GrilleView;
 import consolefps.views.View;
 
 /**
@@ -42,6 +43,8 @@ public class Jeux extends Controlleur {
 	private Menu menu;
 	private View view;
 
+	private GrilleView viewGrille;
+
 	/**
      *
      */
@@ -54,7 +57,9 @@ public class Jeux extends Controlleur {
 		this.decors = new LinkedList<>();
 		this.joueur = new Joueur(1, 1);
 
-		this.view = new View();
+		this.view = new GrilleView(this.grille);
+
+		this.viewGrille = new GrilleView(this.grille);
 
 		initialiserLeJeux();
 
@@ -159,6 +164,6 @@ public class Jeux extends Controlleur {
 
 	@Override
 	public String affichage() {
-		return this.grille.afficherGrille();
+		return this.viewGrille.afficherGrille();
 	}
 }
